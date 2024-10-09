@@ -1,4 +1,4 @@
-set n := 1..50;  # Set of integers from 1 to 50
+set n := 1..50;  # Interi da 1 a 50 (numero di oggetti)
 param b;  # Peso massimo del bagaglio
 
 param W{n};  # Peso degli oggetti

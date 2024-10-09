@@ -1,1 +1,5 @@
+# Legge il file e mette:
+# prima riga dentro b
+# dalla seconda in poi (Vedere se possibile non mettere limite) il primo elemento dentro W, il secondo dentro P
+
 read b, {i in 1..50} (W[i], P[i]) < (textfile);
