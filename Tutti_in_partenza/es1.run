@@ -2,6 +2,36 @@ reset;
 
 model es1.mod;
 
+param textfile := "caso1.txt" symbolic;
+
+data es1.dat;
+
+option solver highs;
+
+solve;
+
+display X, z;
+
+reset;
+
+model es1.mod;
+
+param textfile := "caso2.txt" symbolic;
+
+data es1.dat;
+
+option solver highs;
+
+solve;
+
+display X, z;
+
+reset;
+
+model es1.mod;
+
+param textfile := "caso3.txt" symbolic;
+
 data es1.dat;
 
 option solver highs;

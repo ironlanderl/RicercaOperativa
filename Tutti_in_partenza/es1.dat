@@ -1,1 +1,1 @@
-read b, {i in 1..50} (W[i], P[i]) < caso1.txt;
+read b, {i in 1..50} (W[i], P[i]) < (textfile);
