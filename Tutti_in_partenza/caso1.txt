@@ -1,6 +1,3 @@
-\\ il primo intero indica la capacita' del bagaglio
-\\ ogni riga successiva descrive un singolo oggetto (valore e peso)
-
 153
 1, 2
 2, 4
