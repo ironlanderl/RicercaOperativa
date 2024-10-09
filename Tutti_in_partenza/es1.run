@@ -1,0 +1,11 @@
+reset;
+
+model es1.mod;
+
+data es1.dat;
+
+option solver highs;
+
+solve;
+
+display X, z;

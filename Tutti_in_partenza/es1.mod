@@ -1,0 +1,13 @@
+set n := 1..50;  # Set of integers from 1 to 50
+param m;  # Peso massimo del bagaglio
+
+param W{n};  # Peso degli oggetti
+param V{n};  # Valore degli oggetti
+
+var X{n} binary;  # Variabili decisionali: 1 se l'oggetto viene scelto, 0 altrimenti
+
+# Funzione obiettivo: massimizzare il valore complessivo degli oggetti selezionati
+maximize z: sum {i in n} V[i] * X[i];
+
+# Vincolo: il peso totale degli oggetti selezionati non deve superare il peso massimo
+s.t. Constraint: sum {i in n} W[i] * X[i] <= m;

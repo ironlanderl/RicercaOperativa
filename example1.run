@@ -1,0 +1,9 @@
+reset;
+
+model example1.mod;
+
+option solver highs;
+
+solve;
+
+display x1, x2, z;

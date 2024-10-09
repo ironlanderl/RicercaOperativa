@@ -1,0 +1,13 @@
+reset;
+
+model example2.mod;
+
+data example2.dat;
+
+expand z, Constraint;
+
+option solver highs;
+
+solve;
+
+display X, z;
