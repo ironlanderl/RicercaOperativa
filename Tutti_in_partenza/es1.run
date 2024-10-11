@@ -1,6 +1,8 @@
 # ---------------------- Caso 1 ----------------------
 reset;
 
+printf "Soluzione Caso 1\n";
+
 model es1.mod;
 
 param textfile := "caso1.txt" symbolic;
@@ -11,10 +13,14 @@ option solver highs;
 
 solve;
 
-display X, z;
+printf "Valore totale: %d, Peso totale: %d\n", z, sum {i in n} W[i] * X[i];
+printf "Oggetti da prendere:\n";
+printf {i in n: X[i] >= 1} "Oggetto numero %d: Peso %i, Valore %d\n", i, W[i], P[i]; 
 
 # ---------------------- Caso 2 ----------------------
 reset;
+
+printf "Soluzione Caso 2\n";
 
 model es1.mod;
 
@@ -26,10 +32,14 @@ option solver highs;
 
 solve;
 
-display X, z;
+printf "Valore totale: %d, Peso totale: %d\n", z, sum {i in n} W[i] * X[i];
+printf "Oggetti da prendere:\n";
+printf {i in n: X[i] >= 1} "Oggetto numero %d: Peso %i, Valore %d\n", i, W[i], P[i];
 
 # ---------------------- Caso 3 ----------------------
 reset;
+
+printf "Soluzione Caso 3\n";
 
 model es1.mod;
 
@@ -41,4 +51,6 @@ option solver highs;
 
 solve;
 
-display X, z;
+printf "Valore totale: %d, Peso totale: %d\n", z, sum {i in n} W[i] * X[i];
+printf "Oggetti da prendere:\n";
+printf {i in n: X[i] >= 1} "Oggetto numero %d: Peso %i, Valore %d\n", i, W[i], P[i];
